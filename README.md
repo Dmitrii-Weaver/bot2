@@ -8,4 +8,4 @@ CURRENT FUNCTIONS :
     - can fetch the frames/ongoing lives of Holomems with short text commands
     - currently working on fetching tweets
 
-requires a token to be used. it's not here, duh, I'm not dumb
+requires a token to be used. 
