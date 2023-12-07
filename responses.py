@@ -1,4 +1,5 @@
 import random
+import getvid
 
 def get_response(message: str) -> str :
     p_message = message.lower()
@@ -8,11 +9,15 @@ def get_response(message: str) -> str :
         return str(random.randint(1,6))
     if p_message == "!help":
         return " `YOUR MESSAGE IN HERE` "
+    if p_message == "!getvid":
+        return getvid.getvid()
     
 
     
     if p_message[:5] == "!tweet":
-        return "it no work yet, lmao"
+        return "currently under construction"
+    
+    
 
     #live stream/freechat get
     if p_message[:6] == "!frame":
@@ -48,3 +53,7 @@ def get_response(message: str) -> str :
 
     if p_message == "!freechat":
         return "https://www.youtube.com/watch?v=xcdlTH2FZEo&list=PLdV-bBPbIWm44iC9TfwtA8TqS-TC5nT24&index=1"
+    
+    
+    #live stream/freechat get
+    
