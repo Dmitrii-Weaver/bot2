@@ -19,7 +19,7 @@ def get_response(message: str) -> str :
     
     
 
-    #live stream/freechat get /////////////////
+    #live stream/freechat get /
     if p_message[:6] == "!frame":
         if p_message.split(" ")[1] == "ame" or p_message.split(" ")[1] == "amelia" :
             return "https://www.youtube.com/@WatsonAmelia/live"
