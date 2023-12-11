@@ -1,5 +1,6 @@
 import random
-import getvid
+from func import getvid
+from func import getbullet
 
 def get_response(message: str) -> str :
     p_message = message.lower()
@@ -55,5 +56,15 @@ def get_response(message: str) -> str :
         return "https://www.youtube.com/watch?v=xcdlTH2FZEo&list=PLdV-bBPbIWm44iC9TfwtA8TqS-TC5nT24&index=1"
     
     
-    #live stream/freechat get
+    #bullet get
+    if p_message[:5] == "!ammo": 
+        bulletName = ""
+        for i in p_message.split(" ")[1:]:
+            bulletName = bulletName + i + " "
+        
+        bulletInfo = getbullet.getammo(bulletName.strip())
+        response = "Damage : " +  str(bulletInfo[0]["damage"]) + "\n" + "Armor Damage : " + str(bulletInfo[0]["armorDamage"]) + "\n" + "Fragmentation Chance : " + str(bulletInfo[0]["fragmentationChance"]) + "\n" + "Ricochet Chance : " + str(bulletInfo[0]["ricochetChance"]) + "\n" + "Penetration Power : " + str(bulletInfo[0]["penetrationPower"]) + "\n"+ "Accuracy : " + str(bulletInfo[0]["accuracy"]) + "\n"+ "Recoil : " + str(bulletInfo[0]["recoil"]) + "\n"+ "Initial Speed : " + str(bulletInfo[0]["initialSpeed"]) + "\n"
+
+        return response
+         
     
