@@ -56,7 +56,7 @@ def get_response(message: str) -> str :
         return "https://www.youtube.com/watch?v=xcdlTH2FZEo&list=PLdV-bBPbIWm44iC9TfwtA8TqS-TC5nT24&index=1"
     
     
-    #bullet get
+    #bullet //// get
     if p_message[:5] == "!ammo": 
         bulletName = ""
         for i in p_message.split(" ")[1:]:
